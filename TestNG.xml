@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="oTTo TestSuite" allow-return-values="true" thread-count="4" parallel="tests" verbose="1">
+
+    <listeners>
+        <listener class-name="base.InvokedMethodListener"></listener>
+    </listeners>
+
+    <test name="Chrome run" thread-count="1">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="Tests" />
+        </classes>
+    </test>
+
+    <test name="Firefox run" thread-count="1">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="Tests" />
+        </classes>
+    </test>
+
+    <test name="Edge run" thread-count="1">
+        <parameter name="browser" value="edge" />
+        <classes>
+            <class name="Tests" />
+        </classes>
+    </test>
+
+    <test name="Internet Explorer run" thread-count="1">
+        <parameter name="browser" value="IE" />
+        <classes>
+            <class name="Tests" />
+        </classes>
+    </test>
+
+</suite>
+
